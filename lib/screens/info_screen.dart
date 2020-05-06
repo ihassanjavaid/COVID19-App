@@ -31,7 +31,9 @@ class InfoScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Flexible(
+                    SizedBox(
+                      height: 135,
+                      width: double.infinity,
                       child: ListView(
                         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         scrollDirection: Axis.horizontal,
