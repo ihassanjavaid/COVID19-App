@@ -173,7 +173,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 20,
-                )
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -193,8 +193,19 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   height: 170,
                   width: double.infinity,
-                  
-                )
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 30,
+                        color: kShadowColor,
+                      ),
+                    ]
+                  ),
+                  child: Image.asset('assets/images/map.png'),
+                ),
               ],
             ),
           )
