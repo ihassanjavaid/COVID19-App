@@ -58,15 +58,15 @@ class PreventionCard extends StatelessWidget {
                         fontSize: 12,
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: SvgPicture.asset(
-                        'assets/icons/forward.svg',
-                        height: 10,
-                      ),
-                    )
                   ],
                 ),
+              ),
+            ),
+            Positioned(
+              bottom: 35,
+              right: 20,
+              child: SvgPicture.asset(
+                'assets/icons/forward.svg',
               ),
             )
           ],
