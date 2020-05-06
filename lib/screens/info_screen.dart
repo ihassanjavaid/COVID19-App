@@ -76,9 +76,15 @@ class InfoScreen extends StatelessWidget {
                     ),
                     PreventionCard(
                       text:
-                          'Since the start of0 the Coronavirus outbreak some places have fully embraced washing hands',
+                          'People have developed this habit of washing their hands every now and then for their protection',
                       image: 'assets/images/wash_hands.png',
                       title: 'Wash your hands',
+                    ),
+                    PreventionCard(
+                      text:
+                      'Social distancing and isolation are the only known preventive measures in this pandemic',
+                      image: 'assets/images/wash_hands.png',
+                      title: 'Stay Distant',
                     ),
                     SizedBox(
                       height: 50,
