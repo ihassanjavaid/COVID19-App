@@ -17,6 +17,7 @@ class InfoScreen extends StatelessWidget {
             image: 'assets/icons/coronadr.svg',
             textTop: 'Get to know',
             textBottom: 'About Covid-19',
+            showMenuButton: false,
           ),
           Expanded(
             child: SingleChildScrollView(

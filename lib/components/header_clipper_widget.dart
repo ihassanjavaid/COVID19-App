@@ -9,12 +9,14 @@ class Header extends StatelessWidget {
   final String image;
   final String textTop;
   final String textBottom;
+  final bool showMenuButton;
 
   const Header({
     Key key,
     this.image,
     this.textTop,
-    this.textBottom,
+    this.textBottom, 
+    this.showMenuButton,
   }) : super(key: key);
 
   @override
@@ -43,12 +45,14 @@ class Header extends StatelessWidget {
           children: <Widget>[
             Align(
                 alignment: Alignment.topRight,
-                child: GestureDetector(
+                child: showMenuButton ?
+                GestureDetector(
                     child: SvgPicture.asset('assets/icons/menu.svg'),
                   onTap: () {
                       Navigator.pushNamed(context, InfoScreen.id);
                   },
-                ),
+                ) :
+                Text(''),
             ),
             Expanded(
               child: Stack(

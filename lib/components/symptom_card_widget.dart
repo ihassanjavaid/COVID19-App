@@ -19,8 +19,8 @@ class _SymptomCardState extends State<SymptomCard> {
 
   _animateContainer(){
     setState(() {
-      _height = _height == 100 ? 120 : 100;
-      _width = _width == 140 ? 160 : 140;
+      _height = _height == 100 ? 180 : 100;
+      _width = _width == 140 ? 180 : 140;
       _color = _color == Colors.white ? kInfectedColor : Colors.white;
     });
   }

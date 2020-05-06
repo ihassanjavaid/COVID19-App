@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
             image: 'assets/icons/Drcorona.svg',
             textTop: "All you need",
             textBottom: "is stay at home.",
+            showMenuButton: true,
           ),
          Expanded(
            child: SingleChildScrollView(
