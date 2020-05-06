@@ -5,12 +5,8 @@ class SymptomCard extends StatelessWidget {
   final String image;
   final String title;
   final bool isActive;
-  const SymptomCard({
-    Key key,
-    this.image,
-    this.title,
-    this.isActive = false
-  }) : super(key: key);
+  const SymptomCard({Key key, this.image, this.title, this.isActive = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +16,18 @@ class SymptomCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
           boxShadow: [
-            isActive ?
-            BoxShadow(
-              offset: Offset(0, 10),
-              blurRadius: 20,
-              color: kActiveShadowColor,
-            )
-                :
-            BoxShadow(
-              offset: Offset(0, 3),
-              blurRadius: 6,
-              color: kShadowColor,
-            ),
-          ]
-      ),
+            isActive
+                ? BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 20,
+                    color: kActiveShadowColor,
+                  )
+                : BoxShadow(
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                    color: kShadowColor,
+                  ),
+          ]),
       child: Column(
         children: <Widget>[
           Image.asset(

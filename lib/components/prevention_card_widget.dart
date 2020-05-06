@@ -2,7 +2,6 @@ import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class PreventionCard extends StatelessWidget {
   final String image;
   final String title;
@@ -25,8 +24,7 @@ class PreventionCard extends StatelessWidget {
           children: <Widget>[
             Container(
               height: 136,
-              child: Column(
-              ),
+              child: Column(),
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -43,8 +41,7 @@ class PreventionCard extends StatelessWidget {
             Positioned(
               left: 150,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 height: 136,
                 width: MediaQuery.of(context).size.width - 170,
                 child: Column(

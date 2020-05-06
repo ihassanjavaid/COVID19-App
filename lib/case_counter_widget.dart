@@ -41,10 +41,7 @@ class CaseCounterContainer extends StatelessWidget {
         ),
         Text(
           '$number',
-          style: TextStyle(
-              fontSize: 40,
-              color: color
-          ),
+          style: TextStyle(fontSize: 40, color: color),
         ),
         Text(
           title,
