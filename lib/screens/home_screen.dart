@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                                      style: kTitleTextstyle,
                                    ),
                                    TextSpan(
-                                       text: 'Newest update May 06',
+                                       text: 'Last Updated: May 06',
                                        style: TextStyle(
                                          color: kTextLightColor,
                                        )
