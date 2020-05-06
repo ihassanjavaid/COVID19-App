@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                    Color( 0xFF3383CD),
+                    Color(0xFF3383CD),
                     Color(0xFF11249f),
                   ],
                 ),
@@ -33,17 +33,17 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Align(
-                    alignment: Alignment.topRight,
-                      child: SvgPicture.asset('assets/icons/menu.svg')
-                  ),
+                      alignment: Alignment.topRight,
+                      child: SvgPicture.asset('assets/icons/menu.svg')),
                   SizedBox(
                     height: 20,
                   ),
                   Expanded(
                     child: Stack(
                       children: <Widget>[
-                        SvgPicture.asset('assets/icons/Drcorona.svg',
-                        width: 230,
+                        SvgPicture.asset(
+                          'assets/icons/Drcorona.svg',
+                          width: 230,
                           fit: BoxFit.fitWidth,
                           alignment: Alignment.topCenter,
                         ),
@@ -52,9 +52,8 @@ class HomeScreen extends StatelessWidget {
                           left: 150,
                           child: Text(
                             'All you need \nis stay at home.',
-                            style: kHeadingTextStyle.copyWith(
-                              color: Colors.white
-                            ),
+                            style:
+                                kHeadingTextStyle.copyWith(color: Colors.white),
                           ),
                         ),
                         Container(),
@@ -71,22 +70,84 @@ class HomeScreen extends StatelessWidget {
             height: 60,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
-              border: Border.all(color: Color(0xFFE5E5E5))
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(color: Color(0xFFE5E5E5))),
             child: Row(
               children: <Widget>[
                 SvgPicture.asset('assets/icons/maps-and-flags.svg'),
+                SizedBox(
+                  width: 20,
+                ),
                 Expanded(
                   child: DropdownButton(
+                    isExpanded: true,
+                    underline: SizedBox(),
+                    icon: SvgPicture.asset('assets/icons/dropdown.svg'),
+                    value: 'Pakistan',
                     items: ['Pakistan', 'United States', 'China']
-                        .map((e) => null)
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {},
                   ),
                 ),
               ],
             ),
           ),
+          SizedBox(
+              height: 20
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Case Update\n',
+                            style: kTitleTextstyle,
+                          ),
+                          TextSpan(
+                            text: 'Newest update May 06',
+                            style: TextStyle(
+                              color: kTextLightColor,
+                            )
+                          )
+                        ]
+                      ),
+                    ),
+                    Spacer(),
+                    Text('See details',
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.w600
+                    ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    boxShadow: [
+                      
+                    ]
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
