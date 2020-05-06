@@ -1,4 +1,5 @@
-import 'package:covid19/components/custom_clipper.dart';
+import 'package:covid19/components/custom_clipper_widget.dart';
+import 'package:covid19/screens/info_screen.dart';
 import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -42,7 +43,13 @@ class Header extends StatelessWidget {
           children: <Widget>[
             Align(
                 alignment: Alignment.topRight,
-                child: SvgPicture.asset('assets/icons/menu.svg')),
+                child: GestureDetector(
+                    child: SvgPicture.asset('assets/icons/menu.svg'),
+                  onTap: () {
+                      Navigator.pushNamed(context, InfoScreen.id);
+                  },
+                ),
+            ),
             Expanded(
               child: Stack(
                 children: <Widget>[

@@ -1,4 +1,4 @@
-import 'package:covid19/components/custom_clipper.dart';
+import 'package:covid19/components/custom_clipper_widget.dart';
 import 'package:covid19/screens/home_screen.dart';
 import 'package:covid19/screens/info_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,11 @@ class COVID extends StatelessWidget {
         fontFamily: "Poppins",
         textTheme: kTextTheme
       ),
-      home: InfoScreen(),
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id: (context) => HomeScreen(),
+        InfoScreen.id: (context) => InfoScreen(),
+      },
     );
   }
 }
