@@ -1,7 +1,7 @@
 import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
-class SymptomCard extends StatelessWidget {
+class SymptomCard extends StatefulWidget {
   final String image;
   final String title;
   final bool isActive;
@@ -9,14 +9,20 @@ class SymptomCard extends StatelessWidget {
       : super(key: key);
 
   @override
+  _SymptomCardState createState() => _SymptomCardState();
+}
+
+class _SymptomCardState extends State<SymptomCard> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: ,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
           boxShadow: [
-            isActive
+            widget.isActive
                 ? BoxShadow(
                     offset: Offset(0, 10),
                     blurRadius: 20,
@@ -31,11 +37,11 @@ class SymptomCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.asset(
-            image,
+            widget.image,
             height: 90,
           ),
           Text(
-            title,
+            widget.title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
