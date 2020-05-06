@@ -1,3 +1,4 @@
+import 'package:covid19/case_counter_widget.dart';
 import 'package:covid19/components/custom_clipper.dart';
 import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -141,10 +142,59 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
                     boxShadow: [
-                      
-                    ]
+                      BoxShadow(
+                        offset: Offset(0, 4),
+                        blurRadius: 30,
+                        color: kShadowColor,
+                      ),
+                    ],
+                  ),
+
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      CaseCounterContainer(
+                        color: kInfectedColor,
+                        number: 1024,
+                        title: 'Infected',
+                      ),
+                      CaseCounterContainer(
+                        color: kDeathColor,
+                        number: 96,
+                        title: 'Deaths',
+                      ),
+                      CaseCounterContainer(
+                        color: kRecoverColor,
+                        number: 256,
+                        title: 'Recovered',
+                      ),
+                    ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      'Spread of Virus',
+                      style: kTitleTextstyle,
+                    ),
+                    Text(
+                      'See Details',
+                      style: TextStyle(
+                        color: kPrimaryColor,
+                        fontWeight: FontWeight.w600
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  height: 170,
+                  width: double.infinity,
+                  
+                )
               ],
             ),
           )
@@ -153,3 +203,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
