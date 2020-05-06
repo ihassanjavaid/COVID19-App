@@ -42,19 +42,27 @@ class InfoScreen extends StatelessWidget {
                           SymptomCard(
                             image: 'assets/images/headache.png',
                             title: 'Headache',
+                            detailsText:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                             isActive: true,
                           ),
                           SymptomCard(
                             image: 'assets/images/caugh.png',
                             title: 'Cough',
+                            detailsText:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                           ),
                           SymptomCard(
                             image: 'assets/images/fever.png',
                             title: 'Fever',
+                            detailsText:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                           ),
                           SymptomCard(
                             image: 'assets/images/headache.png',
                             title: 'Lethargy',
+                            detailsText:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                           ),
                         ],
                       ),
