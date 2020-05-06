@@ -1,5 +1,6 @@
 import 'package:covid19/components/custom_clipper.dart';
 import 'package:covid19/screens/home_screen.dart';
+import 'package:covid19/screens/info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:covid19/utilities/constants.dart';
 
@@ -19,7 +20,7 @@ class COVID extends StatelessWidget {
         fontFamily: "Poppins",
         textTheme: kTextTheme
       ),
-      home: HomeScreen(),
+      home: InfoScreen(),
     );
   }
 }
