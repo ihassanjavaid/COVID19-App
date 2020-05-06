@@ -59,18 +59,20 @@ class InfoScreen extends StatelessWidget {
                     height: 20,
                   ),
                   PreventionCard(
-                    text:  'Since the start of the Coronavirus outbreak some places have fully embraced wearing facemasks',
+                    text:
+                        'Since the start of the Coronavirus outbreak some places have fully embraced wearing facemasks',
                     image: 'assets/images/wear_mask.png',
                     title: 'Wear face mask',
                   ),
                   PreventionCard(
-                    text:  'Since the start of0 the Coronavirus outbreak some places have fully embraced washing hands',
+                    text:
+                        'Since the start of0 the Coronavirus outbreak some places have fully embraced washing hands',
                     image: 'assets/images/wash_hands.png',
                     title: 'Wash your hands',
                   ),
-SizedBox(
-  height: 50,
-),
+                  SizedBox(
+                    height: 50,
+                  ),
                 ],
               ),
             )
