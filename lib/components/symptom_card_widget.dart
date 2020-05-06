@@ -75,15 +75,18 @@ class _SymptomCardState extends State<SymptomCard> {
                 ),
               ],
             ),
-            AnimatedContainer(
-              duration: Duration(milliseconds: 800),
-              height: 100,
-              width: _containerWidth,
-              child: AutoSizeText(
-                _textDetailsString,
-                maxLines: 4,
-                overflow: TextOverflow.clip,
-                minFontSize: 14,
+            Padding(
+              padding: const EdgeInsets.only(top: 15),
+              child: AnimatedContainer(
+                duration: Duration(milliseconds: 800),
+                height: 100,
+                width: _containerWidth,
+                child: AutoSizeText(
+                  _textDetailsString,
+                  maxLines: 4,
+                  overflow: TextOverflow.clip,
+                  minFontSize: 14,
+                ),
               ),
             )
           ],

@@ -1,4 +1,4 @@
-import 'package:covid19/case_counter_widget.dart';
+import 'package:covid19/components/case_counter_widget.dart';
 import 'package:covid19/components/header_clipper_widget.dart';
 import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
