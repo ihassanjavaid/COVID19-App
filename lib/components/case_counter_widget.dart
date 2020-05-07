@@ -60,7 +60,7 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
               color: widget.color.withOpacity(.26),
             ),
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 200),
+              duration: Duration(milliseconds: 500),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.transparent,
