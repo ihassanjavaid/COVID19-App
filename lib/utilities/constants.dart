@@ -27,5 +27,4 @@ const kTitleTextstyle = TextStyle(
 );
 
 //Text Theme
-
 const kTextTheme = TextTheme(bodyText2: TextStyle(color: kBodyTextColor));
