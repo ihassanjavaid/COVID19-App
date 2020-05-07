@@ -37,9 +37,9 @@ class Header extends StatelessWidget {
               Color(0xFF11249f),
             ],
           ),
-          /*image: DecorationImage(
+          image: DecorationImage(
             image: AssetImage('assets/images/virus.png'),
-          ),*/
+          ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

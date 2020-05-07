@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   static String id = 'home_screen';
 
   getData() async {
-    final String url = 'https://api.covid19api.com/total/country/pakistan';
+    final String url = 'http://192.168.100.95/rest/';
     final http.Response rawJson = await http.get(url);
     final parsedJson = jsonDecode(rawJson.body);
 
