@@ -35,36 +35,48 @@ class InfoScreen extends StatelessWidget {
                     SizedBox(
                       height: 135,
                       width: double.infinity,
-                      child: ListView(
-                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          SymptomCard(
-                            image: 'assets/images/headache.png',
-                            title: 'Headache',
-                            detailsText:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-                            isActive: true,
-                          ),
-                          SymptomCard(
-                            image: 'assets/images/caugh.png',
-                            title: 'Cough',
-                            detailsText:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-                          ),
-                          SymptomCard(
-                            image: 'assets/images/fever.png',
-                            title: 'Fever',
-                            detailsText:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-                          ),
-                          SymptomCard(
-                            image: 'assets/images/headache.png',
-                            title: 'Lethargy',
-                            detailsText:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-                          ),
-                        ],
+                      child: Container(
+                        color: Colors.white,
+                        child: ListView(
+                          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            SymptomCard(
+                              image: 'assets/images/headache.png',
+                              title: 'Headache',
+                              detailsText:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                              isActive: true,
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            SymptomCard(
+                              image: 'assets/images/caugh.png',
+                              title: 'Cough',
+                              detailsText:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            SymptomCard(
+                              image: 'assets/images/fever.png',
+                              title: 'Fever',
+                              detailsText:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            SymptomCard(
+                              image: 'assets/images/headache.png',
+                              title: 'Lethargy',
+                              detailsText:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
