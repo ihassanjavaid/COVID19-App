@@ -50,7 +50,7 @@ class Header extends StatelessWidget {
                 GestureDetector(
                     child: SvgPicture.asset('assets/icons/menu.svg'),
                   onTap: () {
-                      Navigator.popAndPushNamed(context, InfoScreen.id);
+                      Navigator.pushNamed(context, InfoScreen.id);
                   },
                 ) :
                 GestureDetector(
