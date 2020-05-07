@@ -59,7 +59,7 @@ class _SymptomCardState extends State<SymptomCard> {
                     ),
             ]),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Column(
               children: <Widget>[
