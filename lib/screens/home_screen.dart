@@ -121,7 +121,6 @@ class HomeScreen extends StatelessWidget {
                                     child: CircularProgressIndicator(),
                                   );
                                 }
-
                                 final CovidData covidData = snapshot.data;
                                 return Row(
                                   mainAxisAlignment:
