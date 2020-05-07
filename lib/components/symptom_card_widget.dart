@@ -59,7 +59,7 @@ class _SymptomCardState extends State<SymptomCard> {
                     ),
             ]),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Column(
               children: <Widget>[
@@ -76,16 +76,19 @@ class _SymptomCardState extends State<SymptomCard> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 15),
+              padding: const EdgeInsets.only(top: 3),
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 800),
+                duration: Duration(milliseconds: 200),
                 height: 100,
                 width: _containerWidth,
                 child: AutoSizeText(
                   _textDetailsString,
                   maxLines: 4,
                   overflow: TextOverflow.clip,
-                  minFontSize: 14,
+                  minFontSize: 16,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600
+                  ),
                 ),
               ),
             )
