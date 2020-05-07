@@ -26,15 +26,15 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
 
   void updateColors(){
     setState(() {
-      _circleWidth = _circleWidth == 2 ? 10 : 2;
-      _outerCircle = _outerCircle == 25 ? 45 : 25;
+      _circleWidth = _circleWidth == 2 ? 4 : 2;
+      _outerCircle = _outerCircle == 25 ? 30 : 25;
     });
   }
   
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(Duration(milliseconds: 1000), (Timer colorUpdater) {
+    timer = Timer.periodic(Duration(milliseconds: 1000), (Timer ticker) {
       updateColors();
     });
   }
@@ -49,7 +49,7 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
     return Column(
       children: <Widget>[
         Container(
-          height: 45,
+          height: 30,
           child: AnimatedContainer(
             duration: Duration(milliseconds: 500),
             padding: EdgeInsets.all(6),
