@@ -49,7 +49,7 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
     return Column(
       children: <Widget>[
         Container(
-          height: 30,
+          height: 32,
           child: AnimatedContainer(
             duration: Duration(milliseconds: 500),
             padding: EdgeInsets.all(6),
@@ -76,8 +76,8 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
           height: 10,
         ),
         Text(
-          '${widget.number}',
-          style: TextStyle(fontSize: 40, color: widget.color),
+          formatCaseNumber(caseCount: widget.number),
+          style: TextStyle(fontSize: 30, color: widget.color),
         ),
         Text(
           widget.title,
@@ -85,5 +85,17 @@ class _CaseCounterContainerState extends State<CaseCounterContainer> {
         ),
       ],
     );
+  }
+
+  String formatCaseNumber({@required int caseCount}) {
+    if (caseCount.toString().length < 4)
+      return caseCount.toString();
+    else if (caseCount.toString().length == 4)
+      return caseCount.toString().substring(0, 1) + ',' + caseCount.toString().substring(1, 4);
+    else if (caseCount.toString().length == 5)
+    return caseCount.toString().substring(0, 2) + ',' + caseCount.toString().substring(2,5);
+    else if (caseCount.toString().length == 6)
+      return caseCount.toString().substring(0, 3) + ',' + caseCount.toString().substring(3,6);
+    return caseCount.toString();
   }
 }
