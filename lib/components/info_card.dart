@@ -5,7 +5,7 @@ import 'package:covid19/utilities/constants.dart';
 
 class InfoCard extends StatelessWidget {
   final String title;
-  final int effectedNum;
+  final String effectedNum;
   final Color iconColor;
   final Function press;
 

@@ -51,25 +51,25 @@ class HomeScreen extends StatelessWidget {
                       InfoCard(
                         title: "Confirmed Cases",
                         iconColor: Color(0xFFFF8C00),
-                        effectedNum: covidData.confirmed,
+                        effectedNum: CustomWidgetBuilders.formatCaseNumber(caseCount: covidData.confirmed),
                         press: () {},
                       ),
                       InfoCard(
                         title: "Total Deaths",
                         iconColor: Color(0xFFFF2D55),
-                        effectedNum: covidData.deaths,
+                        effectedNum: CustomWidgetBuilders.formatCaseNumber(caseCount: covidData.deaths),
                         press: () {},
                       ),
                       InfoCard(
                         title: "Total Recovered",
                         iconColor: Color(0xFF50E3C2),
-                        effectedNum: covidData.recovered,
+                        effectedNum: CustomWidgetBuilders.formatCaseNumber(caseCount: covidData.recovered),
                         press: () {},
                       ),
                       InfoCard(
                         title: "Active Cases",
                         iconColor: Color(0xFF5856D6),
-                        effectedNum: covidData.active,
+                        effectedNum: CustomWidgetBuilders.formatCaseNumber(caseCount: covidData.active),
                         press: () {
                           Navigator.push(
                             context,

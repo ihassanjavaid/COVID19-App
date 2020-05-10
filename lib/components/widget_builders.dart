@@ -181,4 +181,18 @@ class CustomWidgetBuilders{
       ),
     );
   }
+
+  static formatCaseNumber({@required int caseCount}) {
+    if (caseCount.toString().length < 4)
+      return caseCount.toString();
+    else if (caseCount.toString().length == 4)
+      return caseCount.toString().substring(0, 1) + ',' + caseCount.toString().substring(1, 4);
+    else if (caseCount.toString().length == 5)
+      return caseCount.toString().substring(0, 2) + ',' + caseCount.toString().substring(2,5);
+    else if (caseCount.toString().length == 6)
+      return caseCount.toString().substring(0, 3) + ',' + caseCount.toString().substring(3,6);
+    else if (caseCount.toString().length == 7)
+      return caseCount.toString().substring(0, 1) + ',' + caseCount.toString().substring(2,5) + ',' + caseCount.toString().substring(3,6);
+    return caseCount.toString();
+  }
 }
