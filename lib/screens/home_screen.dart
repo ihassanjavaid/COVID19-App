@@ -1,14 +1,25 @@
+import 'dart:convert';
+
 import 'package:covid19/components/info_card.dart';
 import 'package:covid19/components/widget_builders.dart';
+import 'package:covid19/models/covid_data.dart';
 import 'package:covid19/screens/details_screen.dart';
 import 'package:covid19/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatelessWidget {
   static String id = 'home_screen';
 
   @override
   Widget build(BuildContext context) {
+    getData() async {
+      final String url = 'https://api.covid19api.com/total/country/pakistan';
+      final http.Response rawJson = await http.get(url);
+      final parsedJson = jsonDecode(rawJson.body);
+      return CovidData.fromJson(parsedJson.last);
+    }
+
     return Scaffold(
       appBar: CustomWidgetBuilders.buildAppBar(),
       body: Column(
@@ -24,45 +35,55 @@ class HomeScreen extends StatelessWidget {
                 bottomRight: Radius.circular(50),
               ),
             ),
-            child: Wrap(
-              runSpacing: 20,
-              spacing: 20,
-              children: <Widget>[
-                InfoCard(
-                  title: "Confirmed Cases",
-                  iconColor: Color(0xFFFF8C00),
-                  effectedNum: 1062,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "Total Deaths",
-                  iconColor: Color(0xFFFF2D55),
-                  effectedNum: 75,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "Total Recovered",
-                  iconColor: Color(0xFF50E3C2),
-                  effectedNum: 689,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "New Cases",
-                  iconColor: Color(0xFF5856D6),
-                  effectedNum: 75,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return DetailsScreen();
+            child: FutureBuilder(
+                future: getData(),
+                builder: (BuildContext context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+                  final covidData = snapshot.data;
+                  return Wrap(
+                    runSpacing: 20,
+                    spacing: 20,
+                    children: <Widget>[
+                      InfoCard(
+                        title: "Confirmed Cases",
+                        iconColor: Color(0xFFFF8C00),
+                        effectedNum: covidData.confirmed,
+                        press: () {},
+                      ),
+                      InfoCard(
+                        title: "Total Deaths",
+                        iconColor: Color(0xFFFF2D55),
+                        effectedNum: covidData.deaths,
+                        press: () {},
+                      ),
+                      InfoCard(
+                        title: "Total Recovered",
+                        iconColor: Color(0xFF50E3C2),
+                        effectedNum: covidData.recovered,
+                        press: () {},
+                      ),
+                      InfoCard(
+                        title: "Active Cases",
+                        iconColor: Color(0xFF5856D6),
+                        effectedNum: covidData.active,
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return DetailsScreen();
+                              },
+                            ),
+                          );
                         },
                       ),
-                    );
-                  },
-                ),
-              ],
-            ),
+                    ],
+                  );
+                }),
           ),
           SizedBox(height: 20),
           Padding(
@@ -81,7 +102,14 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   CustomWidgetBuilders.buildPrevention(),
                   SizedBox(height: 40),
-                  CustomWidgetBuilders.buildHelpCard(context)
+                  SizedBox(
+                    height: 130,
+                    child: ListView(
+                      children: <Widget>[
+                        CustomWidgetBuilders.buildHelpCard(context),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -90,7 +118,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-
 }
-

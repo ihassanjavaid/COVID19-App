@@ -92,7 +92,14 @@ class DetailsScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 10),
-                  SvgPicture.asset("assets/icons/map.svg"),
+                  SizedBox(
+                    height: 120,
+                    child: ListView(
+                      children: <Widget>[
+                        SvgPicture.asset("assets/icons/map.svg")
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
