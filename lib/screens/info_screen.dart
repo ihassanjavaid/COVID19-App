@@ -1,3 +1,4 @@
+/*
 import 'package:covid19/components/header_clipper_widget.dart';
 import 'package:covid19/components/prevention_card_widget.dart';
 import 'package:covid19/components/symptom_card_widget.dart';
@@ -124,3 +125,4 @@ class InfoScreen extends StatelessWidget {
     );
   }
 }
+*/

@@ -23,7 +23,7 @@ class COVID extends StatelessWidget {
       initialRoute: HomeScreen.id,
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
-        InfoScreen.id: (context) => InfoScreen(),
+        //InfoScreen.id: (context) => InfoScreen(),
       },
     );
   }
